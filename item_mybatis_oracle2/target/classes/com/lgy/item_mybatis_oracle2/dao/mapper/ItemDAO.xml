@@ -1,0 +1,15 @@
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.lgy.item_mybatis_oracle2.dao.ItemDAO">
+
+    <insert id="write">
+        insert into item(name, price, description) values(#{param1},#{param2},#{param3})
+    </insert>
+    
+    <select id="list" resultType="com.lgy.item_mybatis_oracle2.dto.ItemDTO">
+        select name, price, description from item
+    </select>
+    
+</mapper>
